@@ -13,27 +13,15 @@
  * License for the specific language governing permissions and limitations under
  * the License.
  */
-package org.simulation.login;
-
-import java.io.File;
-
+package org.simulation.util;
 /**
  * @date     08/24/18 17:22
  * @version  simulation-login version(1.0)</br>
  * @author   bluetata / Sekito.Lv@gmail.com</br>
  * @since    JDK 1.8</br>
  */
-public class AbstractLogin {
+public class Constants {
 
-
-
-
-
-
-//    public static void main(String[] args){
-//
-//        String IMG_ROOT_PATH = System.getProperty("user.dir") + File.separator;
-//
-//        System.out.println(IMG_ROOT_PATH);
-//    }
+	public static final int FAIL = 0;
+	public static final int SUCCESS = 1;
 }
