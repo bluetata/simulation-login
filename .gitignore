@@ -54,6 +54,3 @@ $RECYCLE.BIN/
 
 # Windows shortcuts
 *.lnk
-
-/simulation-login.iml
-!/simulation-login.iml
