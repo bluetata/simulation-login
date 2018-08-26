@@ -15,11 +15,34 @@
  */
 package org.simulation.login.impl;
 
+import org.simulation.login.AbstractLogin;
+
 /**
  * @date     08/24/18 17:22
  * @version  simulation-login version(1.0)</br>
  * @author   bluetata / Sekito.Lv@gmail.com</br>
  * @since    JDK 1.8</br>
  */
-public class GitHubLogin {
+public class GitHubLogin implements AbstractLogin {
+
+    /**
+     * 准备登录
+     *
+     * @throws Exception
+     */
+    protected abstract void readyLogin() throws Exception;
+
+    /**
+     * 执行登陆
+     *
+     * @return 登陆的结果
+     */
+    protected abstract int executeLogin() throws Exception;
+
+    /**
+     * 登陆成功，进行测试
+     *
+     * @throws Exception
+     */
+    protected abstract void testLogin() throws Exception;
 }
