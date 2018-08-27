@@ -15,7 +15,7 @@
  */
 package org.simulation.util;
 
-import net.sf.json.JSONObject;
+// import net.sf.json.JSONObject;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -41,24 +41,24 @@ public class StringUtil {
         return !isEmpty(str);
     }
 
-    public static String getJsonStr(JSONObject jso, String key) {
-        Object o = jso.get(key);
-        if (o != null)
-            return o.toString();
-        return null;
-    }
-
-    public static String getJsonStr(String json, String key) {
-        try {
-            JSONObject jso = JSONObject.fromObject(json);
-            Object o = jso.get(key);
-            if (o != null)
-                return o.toString();
-            return null;
-        } catch (Exception e) {
-            return null;
-        }
-    }
+//    public static String getJsonStr(JSONObject jso, String key) {
+//        Object o = jso.get(key);
+//        if (o != null)
+//            return o.toString();
+//        return null;
+//    }
+//
+//    public static String getJsonStr(String json, String key) {
+//        try {
+//            JSONObject jso = JSONObject.fromObject(json);
+//            Object o = jso.get(key);
+//            if (o != null)
+//                return o.toString();
+//            return null;
+//        } catch (Exception e) {
+//            return null;
+//        }
+//    }
 
     public static String regex(String str, String pat) {
         Pattern pattern = Pattern.compile(pat);

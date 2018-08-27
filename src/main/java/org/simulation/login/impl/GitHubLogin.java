@@ -23,26 +23,55 @@ import org.simulation.login.AbstractLogin;
  * @author   bluetata / Sekito.Lv@gmail.com</br>
  * @since    JDK 1.8</br>
  */
-public class GitHubLogin implements AbstractLogin {
+public class GitHubLogin extends AbstractLogin {
+
+    // define default constructor
+    public GitHubLogin(String userName, String password) {
+        super(userName, password);
+    }
 
     /**
      * 准备登录
      *
      * @throws Exception
      */
-    protected abstract void readyLogin() throws Exception;
+    @Override
+    protected void readyLogin() throws Exception{
+
+    }
 
     /**
      * 执行登陆
      *
      * @return 登陆的结果
      */
-    protected abstract int executeLogin() throws Exception;
+    @Override
+    protected int executeLogin() throws Exception{
+        return 0;
+    }
 
     /**
      * 登陆成功，进行测试
      *
      * @throws Exception
      */
-    protected abstract void testLogin() throws Exception;
+    @Override
+    protected void testLogin() throws Exception{
+
+    }
+
+    @Override
+    protected String getLoginUrl() {
+        return null;
+    }
+
+    @Override
+    protected String getAuthCodeImageUrl() {
+        return null;
+    }
+
+    @Override
+    protected String getReadyLoginUrl() {
+        return null;
+    }
 }

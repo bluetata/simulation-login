@@ -31,7 +31,10 @@ import org.apache.http.HttpEntity;
 import org.apache.http.HttpResponse;
 import org.apache.http.client.methods.HttpGet;
 import org.apache.http.impl.client.DefaultHttpClient;
-import org.codehaus.jackson.map.ObjectMapper;
+// import org.codehaus.jackson.map.ObjectMapper;
+import com.fasterxml.jackson.databind.ObjectMapper;
+import org.simulation.util.Constants;
+import org.simulation.util.ConnectionManager;
 
 /**
  * @date     08/24/18 17:22

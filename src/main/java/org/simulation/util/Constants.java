@@ -20,7 +20,7 @@ package org.simulation.util;
  * @author   bluetata / Sekito.Lv@gmail.com</br>
  * @since    JDK 1.8</br>
  */
-public class Constants {
+public final class Constants {
 
 	public static final int FAIL = 0;
 	public static final int SUCCESS = 1;

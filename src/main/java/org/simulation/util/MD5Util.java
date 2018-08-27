@@ -25,7 +25,7 @@ import java.security.MessageDigest;
  * @author   bluetata / Sekito.Lv@gmail.com</br>
  * @since    JDK 1.8</br>
  */
-public class MD5Util {
+public final class MD5Util {
 
     /***
      * MD5加码 生成32位md5码
