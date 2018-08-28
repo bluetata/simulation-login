@@ -15,15 +15,7 @@
  */
 package org.simulation.login;
 
-import java.io.BufferedReader;
-import java.io.File;
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.InputStreamReader;
-import java.io.OutputStream;
-import java.util.HashMap;
-import java.util.Map;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import org.apache.commons.io.IOUtils;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
@@ -31,10 +23,14 @@ import org.apache.http.HttpEntity;
 import org.apache.http.HttpResponse;
 import org.apache.http.client.methods.HttpGet;
 import org.apache.http.impl.client.DefaultHttpClient;
-// import org.codehaus.jackson.map.ObjectMapper;
-import com.fasterxml.jackson.databind.ObjectMapper;
-import org.simulation.util.Constants;
 import org.simulation.util.ConnectionManager;
+import org.simulation.util.Constants;
+
+import java.io.*;
+import java.util.HashMap;
+import java.util.Map;
+
+// import org.codehaus.jackson.map.ObjectMapper;
 
 /**
  * @date     08/24/18 17:22
