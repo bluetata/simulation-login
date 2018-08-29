@@ -15,15 +15,26 @@
  */
 package org.simulation.login.impl;
 
+import org.apache.commons.logging.Log;
+import org.apache.commons.logging.LogFactory;
+import org.apache.http.Consts;
 import org.apache.http.HttpEntity;
 import org.apache.http.HttpResponse;
+import org.apache.http.NameValuePair;
+import org.apache.http.client.entity.UrlEncodedFormEntity;
 import org.apache.http.client.methods.HttpGet;
+import org.apache.http.client.methods.HttpPost;
+import org.apache.http.message.BasicNameValuePair;
 import org.apache.http.util.EntityUtils;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.simulation.login.AbstractLogin;
+import org.simulation.util.Constants;
 
+import java.nio.charset.Charset;
+import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 
 /**
@@ -33,6 +44,8 @@ import java.util.List;
  * @since    JDK 1.8</br>
  */
 public class GitHubLoginApater extends AbstractLogin {
+
+    private static Log logger = LogFactory.getLog(GitHubLoginApater.class);
 
     // define default constructor
     public GitHubLoginApater(String userName, String password) {
@@ -92,7 +105,38 @@ public class GitHubLoginApater extends AbstractLogin {
      */
     @Override
     protected int executeLogin() throws Exception{
-        return 0;
+        HttpPost loginPost = null;
+        try {
+            String loginUrl = getLoginUrl();
+            logger.info("请求login-------->" + loginUrl);
+            loginPost = new HttpPost(loginUrl);
+
+            List<NameValuePair> loginNameValues = new ArrayList<NameValuePair>();
+            loginNameValues.add(new BasicNameValuePair("loginname", getUserName()));
+            loginNameValues.add(new BasicNameValuePair("nloginpwd", getPassword()));
+//            loginNameValues.add(new BasicNameValuePair("loginpwd", getPassword()));
+//            loginNameValues.add(new BasicNameValuePair("authcode", getAuthCode()));
+            Iterator<String> iterator = readyParams.keySet().iterator();
+            while (iterator.hasNext()) {
+                String key = iterator.next().toString();
+                String value = readyParams.get(key).toString();
+                loginNameValues.add(new BasicNameValuePair(key, value));
+            }
+
+            loginPost.setEntity(new UrlEncodedFormEntity(loginNameValues, Consts.UTF_8));
+
+            HttpResponse response = getUserClient().execute(loginPost);
+            String loginRespInfoStr = EntityUtils.toString(response.getEntity(), Charset.forName("utf-8"));
+            logger.info(loginRespInfoStr);
+            if (loginRespInfoStr.contains("success")) {
+                return Constants.SUCCESS;
+            }
+            return Constants.FAIL;
+        } catch (Exception e) {
+            throw e;
+        } finally {
+            loginPost.releaseConnection();
+        }
     }
 
     /**
