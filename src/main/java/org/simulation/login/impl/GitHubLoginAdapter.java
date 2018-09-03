@@ -43,12 +43,12 @@ import java.util.List;
  * @author   bluetata / Sekito.Lv@gmail.com</br>
  * @since    JDK 1.8</br>
  */
-public class GitHubLoginApater extends AbstractLogin {
+public class GitHubLoginAdapter extends AbstractLogin {
 
-    private static Log logger = LogFactory.getLog(GitHubLoginApater.class);
+    private static Log logger = LogFactory.getLog(GitHubLoginAdapter.class);
 
     // define default constructor
-    public GitHubLoginApater(String userName, String password) {
+    public GitHubLoginAdapter(String userName, String password) {
         super(userName, password);
     }
 
