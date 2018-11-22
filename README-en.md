@@ -2,7 +2,7 @@
 
 > *Read this in other languages: [中文](README.md).*
 
-##Simulate login component List
+## Simulate login components List
 
 - [x] [GitHub](https://www.github.com)(已实现)
 - [ ] [Google](https://www.google.com)()
@@ -72,14 +72,14 @@ simulation-login
 <!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
 <!-- prettier-ignore -->
 
-| [<img src="https://avatars1.githubusercontent.com/u/25427352?s=460&v=4" width="100px;"/><br /><sub><b>Sekito Lv</b></sub>](https://github.com/bluetata)<br /> | [<img src="https://avatars1.githubusercontent.com/u/9919?s=200&v=4" width="100px;"/><br /><sub><b>On boarding</b></sub>]()<br />| [<img src="https://avatars1.githubusercontent.com/u/9919?s=200&v=4" width="100px;"/><br /><sub><b>On boarding</b></sub>]()<br /> | [<img src="https://avatars1.githubusercontent.com/u/9919?s=200&v=4" width="100px;"/><br /><sub><b>On boarding</b></sub>]()<br /> | [<img src="https://avatars1.githubusercontent.com/u/9919?s=200&v=4" width="100px;"/><br /><sub><b>On boarding</b></sub>]()<br /> | [<img src="https://avatars1.githubusercontent.com/u/9919?s=200&v=4" width="100px;"/><br /><sub><b>On boarding</b></sub>]()<br /> | [<img src="https://avatars1.githubusercontent.com/u/9919?s=200&v=4" width="100px;"/><br /><sub><b>On boarding</b></sub>]()<br />
+| [<img src="https://avatars1.githubusercontent.com/u/25427352?s=460&v=4" width="100px;"/><br /><sub><b>Sekito Lv</b></sub>](https://github.com/bluetata)<br /> | [<img src="https://avatars1.githubusercontent.com/u/9919?s=200&v=4" width="100px;"/><br /><sub><b>On boarding</b></sub>](#)<br />| [<img src="https://avatars1.githubusercontent.com/u/9919?s=200&v=4" width="100px;"/><br /><sub><b>On boarding</b></sub>](#)<br /> | [<img src="https://avatars1.githubusercontent.com/u/9919?s=200&v=4" width="100px;"/><br /><sub><b>On boarding</b></sub>](#)<br /> | [<img src="https://avatars1.githubusercontent.com/u/9919?s=200&v=4" width="100px;"/><br /><sub><b>On boarding</b></sub>](#)<br /> | [<img src="https://avatars1.githubusercontent.com/u/9919?s=200&v=4" width="100px;"/><br /><sub><b>On boarding</b></sub>](#)<br /> | [<img src="https://avatars1.githubusercontent.com/u/9919?s=200&v=4" width="100px;"/><br /><sub><b>On boarding</b></sub>](#)<br />
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 
 <!-- ALL-CONTRIBUTORS-LIST:END -->
 Thanks goes to these wonderful people.
 
 ## 交流讨论
-QQ交流群：50695115讨论交流或发任何问题或者建议于Issues区域
+You can join the QQ Chat Group：5069**5**11<u>5</u> or Issue any problem or suggestion on [Issues](https://github.com/bluetata/simulation-login/issues) area.
 
 ## License
 Apache License 2.0

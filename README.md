@@ -2,9 +2,9 @@
 
 > *Read this in other languages: [English](README-en.md).*
 
-QQ交流群：5069<u>**5**</u>115
+QQ交流群：5069**5**11<u>5</u>
 
-## Simulate login component List
+## Simulate login components List
 
 - [x] [GitHub](https://www.github.com) （已实现）
 - [ ] [Google](https://www.google.com)()
@@ -81,7 +81,7 @@ simulation-login
 Thanks goes to these wonderful people.
 
 ## 交流讨论
-可以加置顶群讨论交流或发任何问题或者建议于Issues区域
+可以加置顶群讨论交流或发任何问题或者建议于[Issues](https://github.com/bluetata/simulation-login/issues)区域
 
 ## License
 Apache License 2.0
