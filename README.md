@@ -2,11 +2,11 @@
 
 > *Read this in other languages: [English](README-en.md).*
 
-QQ交流群：50695115
+QQ交流群：5069<u>**5**</u>115
 
-##Simulate login component List
+## Simulate login component List
 
-- [x] [GitHub](https://www.github.com)(已实现)
+- [x] [GitHub](https://www.github.com) （已实现）
 - [ ] [Google](https://www.google.com)()
 - [ ] [Facebook](https://www.facebook.com)()
 - [ ] [Twitter](https://twitter.com)()
@@ -74,7 +74,7 @@ simulation-login
 <!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
 <!-- prettier-ignore -->
 
-| [<img src="https://avatars1.githubusercontent.com/u/25427352?s=460&v=4" width="100px;"/><br /><sub><b>Sekito Lv</b></sub>](https://github.com/bluetata)<br /> | [<img src="https://avatars1.githubusercontent.com/u/9919?s=200&v=4" width="100px;"/><br /><sub><b>On boarding</b></sub>]()<br />| [<img src="https://avatars1.githubusercontent.com/u/9919?s=200&v=4" width="100px;"/><br /><sub><b>On boarding</b></sub>]()<br /> | [<img src="https://avatars1.githubusercontent.com/u/9919?s=200&v=4" width="100px;"/><br /><sub><b>On boarding</b></sub>]()<br /> | [<img src="https://avatars1.githubusercontent.com/u/9919?s=200&v=4" width="100px;"/><br /><sub><b>On boarding</b></sub>]()<br /> | [<img src="https://avatars1.githubusercontent.com/u/9919?s=200&v=4" width="100px;"/><br /><sub><b>On boarding</b></sub>]()<br /> | [<img src="https://avatars1.githubusercontent.com/u/9919?s=200&v=4" width="100px;"/><br /><sub><b>On boarding</b></sub>]()<br />
+| [<img src="https://avatars1.githubusercontent.com/u/25427352?s=460&v=4" width="100px;"/><br /><sub><b>Sekito Lv</b></sub>](https://github.com/bluetata)<br /> | [<img src="https://avatars1.githubusercontent.com/u/9919?s=200&v=4" width="100px;"/><br /><sub><b>On boarding</b></sub>](#)<br />| [<img src="https://avatars1.githubusercontent.com/u/9919?s=200&v=4" width="100px;"/><br /><sub><b>On boarding</b></sub>](#)<br /> | [<img src="https://avatars1.githubusercontent.com/u/9919?s=200&v=4" width="100px;"/><br /><sub><b>On boarding</b></sub>](#)<br /> | [<img src="https://avatars1.githubusercontent.com/u/9919?s=200&v=4" width="100px;"/><br /><sub><b>On boarding</b></sub>](#)<br /> | [<img src="https://avatars1.githubusercontent.com/u/9919?s=200&v=4" width="100px;"/><br /><sub><b>On boarding</b></sub>](#)<br /> | [<img src="https://avatars1.githubusercontent.com/u/9919?s=200&v=4" width="100px;"/><br /><sub><b>On boarding</b></sub>](#)<br />
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 
 <!-- ALL-CONTRIBUTORS-LIST:END -->
