@@ -4,7 +4,7 @@
 
 QQ交流群：50695115
 
-##Simulate login component contains
+##Simulate login component List
 
 - [x] [GitHub](https://www.github.com)(已实现)
 - [ ] [Google](https://www.google.com)()
@@ -22,6 +22,7 @@ QQ交流群：50695115
 - [ ] [163邮箱](http://smart.mail.163.com/?dv=smart)()
 - [ ] [126邮箱](http://smart.mail.126.com/?dv=smart)()
 - [ ] [支付宝](https://www.alipay.com/)()
+
 
 ## 简述
 
@@ -56,25 +57,31 @@ simulation-login
 - OCR识别：Tesseract-OCR
 - 图形处理：Captcha Recognize
 - JSON工具：Jackson 2.9.6
-- 日志管理：log4j 2.11.1
+- 日志管理：Log4j 2.11.1
 
 
 ## 架构图
 ![架构图]()
 
 
-##免责声明
+## 免责声明
 1. 本开源项目仅为技术交流此一目的，严禁用于其他任何商业、违法犯罪、恶意攻击等行为
 2. 若第三者用此项目侵犯相关网站权益，一切责任自负
 3. 若本项目侵犯相关网站、个人，组织机构权益，请及时作者
 
 
-##参与贡献者
-bluetata(Sekito.Lv#gmail.com)
+## 参与贡献者
+<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
+<!-- prettier-ignore -->
 
+| [<img src="https://avatars1.githubusercontent.com/u/25427352?s=460&v=4" width="100px;"/><br /><sub><b>Sekito Lv</b></sub>](https://github.com/bluetata)<br /> | [<img src="https://avatars1.githubusercontent.com/u/9919?s=200&v=4" width="100px;"/><br /><sub><b>On boarding</b></sub>]()<br />| [<img src="https://avatars1.githubusercontent.com/u/9919?s=200&v=4" width="100px;"/><br /><sub><b>On boarding</b></sub>]()<br /> | [<img src="https://avatars1.githubusercontent.com/u/9919?s=200&v=4" width="100px;"/><br /><sub><b>On boarding</b></sub>]()<br /> | [<img src="https://avatars1.githubusercontent.com/u/9919?s=200&v=4" width="100px;"/><br /><sub><b>On boarding</b></sub>]()<br /> | [<img src="https://avatars1.githubusercontent.com/u/9919?s=200&v=4" width="100px;"/><br /><sub><b>On boarding</b></sub>]()<br /> | [<img src="https://avatars1.githubusercontent.com/u/9919?s=200&v=4" width="100px;"/><br /><sub><b>On boarding</b></sub>]()<br />
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 
-##交流讨论
+<!-- ALL-CONTRIBUTORS-LIST:END -->
+Thanks goes to these wonderful people.
+
+## 交流讨论
 可以加置顶群讨论交流或发任何问题或者建议于Issues区域
 
-##License
+## License
 Apache License 2.0
