@@ -111,7 +111,7 @@ public class GitHubLoginAdapter extends AbstractLogin {
             logger.info("请求login-------->" + loginUrl);
             loginPost = new HttpPost(loginUrl);
 
-            List<NameValuePair> loginNameValues = new ArrayList<NameValuePair>();
+            List<NameValuePair> loginNameValues = new ArrayList<>();
             loginNameValues.add(new BasicNameValuePair("loginname", getUserName()));
             loginNameValues.add(new BasicNameValuePair("nloginpwd", getPassword()));
 //            loginNameValues.add(new BasicNameValuePair("loginpwd", getPassword()));
@@ -140,7 +140,7 @@ public class GitHubLoginAdapter extends AbstractLogin {
     }
 
     /**
-     * 登陆成功，进行测试
+     * 进行测试，是否模拟登陆成功 / Test if the simulation login is successful.
      *
      * @throws Exception
      */
@@ -149,19 +149,34 @@ public class GitHubLoginAdapter extends AbstractLogin {
 
     }
 
+    /**
+     * 准备login之前的准备login的url，注意该方法为非正式login的url
+     * 该方法会通常被使用在`readyLogin()`方法中，用于获取login前的准备数据
+     * @return
+     */
     @Override
-    protected String getLoginUrl() {
+    protected String getReadyLoginUrl() {
         // XXX: it's better to dynamically get the url. 08/28/2018 17:50 bluetata
         return "https://github.com/login";
     }
 
+    /**
+     * 获取验证码 / get Auth Code
+     * 对于GitHub暂时没有使用
+     * @return 验证码的url / String url of auto code
+     */
     @Override
     protected String getAuthCodeImageUrl() {
         return null;
     }
 
+    /**
+     * 正式login用的url，该方法通常用于`executeLogin()`方法中。
+     * 用于模拟登陆
+     * @return
+     */
     @Override
-    protected String getReadyLoginUrl() {
-        return null;
+    protected String getLoginUrl() {
+        return "https://github.com/login";
     }
 }

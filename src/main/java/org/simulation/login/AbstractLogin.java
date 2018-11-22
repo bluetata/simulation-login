@@ -66,7 +66,7 @@ public abstract class AbstractLogin {
         this.userName = userName;
         this.password = password;
 
-        readyParams = new HashMap<String, String>();
+        readyParams = new HashMap<>();
         userClient = ConnectionManager.getHttpClient();
         mapper = new ObjectMapper();
     }
@@ -76,14 +76,14 @@ public abstract class AbstractLogin {
      */
     public void login() {
         try {
-            readyLogin();
+            readyLogin();                   // 1.为登录准备必要的参数
 
-            getAuthCodeImage();
+            getAuthCodeImage();             // 2.获取验证码
             getInputAuthCode();
 
-            int result = executeLogin();
+            int result = executeLogin();    // 3.执行登录
             if (result == Constants.SUCCESS) {
-                testLogin();
+                testLogin();                // 4.验证登录成功
             }
         } catch (Exception e) {
             logger.error("登陆异常", e);
@@ -166,7 +166,7 @@ public abstract class AbstractLogin {
 
         if (authCode.equals("o")) {
             getAuthCodeImage();
-            getInputAuthCode();
+            getInputAuthCode();     // FIXME Recursive call function  Lv 11/22/2018 11:28
         }
     }
 
