@@ -177,6 +177,6 @@ public class GitHubLoginAdapter extends AbstractLogin {
      */
     @Override
     protected String getLoginUrl() {
-        return "https://github.com/login";
+        return "https://github.com/session";
     }
 }
