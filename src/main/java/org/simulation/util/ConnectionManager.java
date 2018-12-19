@@ -39,7 +39,7 @@ public class ConnectionManager {
      */
     static final int SO_TIMEOUT = 30000;
 
-    static String UA = "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.1"
+    static String USER_AGENT = "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.1"
             + " (KHTML, like Gecko) Chrome/21.0.1180.89 Safari/537.1";
 
     private ConnectionManager() {
@@ -94,7 +94,7 @@ public class ConnectionManager {
             HttpParams params = new BasicHttpParams();
             params.setParameter(CoreConnectionPNames.CONNECTION_TIMEOUT, TIMEOUT);
             params.setParameter(CoreConnectionPNames.SO_TIMEOUT, SO_TIMEOUT);
-            params.setParameter(CoreProtocolPNames.USER_AGENT, UA);
+            params.setParameter(CoreProtocolPNames.USER_AGENT, USER_AGENT);
             httpClient.setParams(params);
         } catch (Exception e) {
             e.printStackTrace();

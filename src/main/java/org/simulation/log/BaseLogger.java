@@ -28,10 +28,10 @@ import org.apache.logging.log4j.LogManager;
 public class BaseLogger {
 
     //服务状态日志
-    public static org.apache.logging.log4j.Logger infoLogger = LogManager.getLogger("infoLogger");
-    public static org.apache.logging.log4j.Logger warnLogger = LogManager.getLogger("warnLogger");
-    public static org.apache.logging.log4j.Logger debugLogger = LogManager.getLogger("debugLogger");
-    public static org.apache.logging.log4j.Logger errorLogger = LogManager.getLogger("errorLogger");
+    protected static org.apache.logging.log4j.Logger infoLogger = LogManager.getLogger("infoLogger");
+    protected static org.apache.logging.log4j.Logger warnLogger = LogManager.getLogger("warnLogger");
+    protected static org.apache.logging.log4j.Logger debugLogger = LogManager.getLogger("debugLogger");
+    protected static org.apache.logging.log4j.Logger errorLogger = LogManager.getLogger("errorLogger");
 
 }
 
