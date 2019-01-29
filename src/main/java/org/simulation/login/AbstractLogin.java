@@ -119,12 +119,14 @@ public abstract class AbstractLogin {
      */
     protected void getAuthCodeImage() throws Exception {
         HttpGet getImage = null;
-        HttpResponse response = null;
+        HttpResponse response;
         InputStream is = null;
         OutputStream os = null;
         try {
             String imageUrl = getAuthCodeImageUrl();
             logger.info("请求login-->" + imageUrl);
+
+            getImage = new HttpGet(imageUrl);
             response = userClient.execute(getImage);
 
             String savePath = getSavePath(getSaveImageRelativePathPath());
