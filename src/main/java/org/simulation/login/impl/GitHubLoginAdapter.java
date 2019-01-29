@@ -1,12 +1,12 @@
 /**
  * Copyright (c) 2017-2019 Sekito Lv(bluetata) <sekito.lv@gmail.com>
- *
+ * <p>
  * Licensed under the Apache License, Version 2.0 (the 'License'); you may not
  * use this file except in compliance with the License. You may obtain a copy of
  * the License at
- *
+ * <p>
  * http://www.apache.org/licenses/LICENSE-2.0
- *
+ * <p>
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an 'AS IS' BASIS, WITHOUT
  * WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
@@ -38,16 +38,16 @@ import java.util.Iterator;
 import java.util.List;
 
 /**
- * @date     08/24/18 17:22
- * @version  simulation-login version(1.0)</br>
- * @author   bluetata / Sekito.Lv@gmail.com</br>
- * @since    JDK 1.8</br>
+ * @author bluetata / Sekito.Lv@gmail.com</br>
+ * @version simulation-login version(1.0)</br>
+ * @date 08/24/18 17:22
+ * @since JDK 1.8</br>
  */
 public class GitHubLoginAdapter extends AbstractLogin {
 
     private static Log logger = LogFactory.getLog(GitHubLoginAdapter.class);
 
-    // define default constructor
+    // Define default constructor
     public GitHubLoginAdapter(String userName, String password) {
         super(userName, password);
     }
@@ -58,7 +58,7 @@ public class GitHubLoginAdapter extends AbstractLogin {
      * @throws Exception
      */
     @Override
-    protected void readyLogin() throws Exception{
+    protected void readyLogin() throws Exception {
         HttpGet readyGet = null;
         try {
             String readyUrl = getReadyLoginUrl();
@@ -104,7 +104,7 @@ public class GitHubLoginAdapter extends AbstractLogin {
      * @return 登陆的结果
      */
     @Override
-    protected int executeLogin() throws Exception{
+    protected int executeLogin() throws Exception {
         HttpPost loginPost = null;
         try {
             String loginUrl = getLoginUrl();
@@ -145,13 +145,14 @@ public class GitHubLoginAdapter extends AbstractLogin {
      * @throws Exception
      */
     @Override
-    protected void testLogin() throws Exception{
+    protected void testLogin() throws Exception {
 
     }
 
     /**
      * 准备login之前的准备login的url，注意该方法为非正式login的url
      * 该方法会通常被使用在`readyLogin()`方法中，用于获取login前的准备数据
+     *
      * @return
      */
     @Override
@@ -163,6 +164,7 @@ public class GitHubLoginAdapter extends AbstractLogin {
     /**
      * 获取验证码 / get Auth Code
      * 对于GitHub暂时没有使用
+     *
      * @return 验证码的url / String url of auto code
      */
     @Override
@@ -173,6 +175,7 @@ public class GitHubLoginAdapter extends AbstractLogin {
     /**
      * 正式login用的url，该方法通常用于`executeLogin()`方法中。
      * 用于模拟登陆
+     *
      * @return
      */
     @Override
