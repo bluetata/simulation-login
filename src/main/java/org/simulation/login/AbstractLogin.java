@@ -22,8 +22,8 @@ import org.apache.commons.logging.LogFactory;
 import org.apache.http.HttpEntity;
 import org.apache.http.HttpResponse;
 import org.apache.http.client.methods.HttpGet;
-import org.apache.http.impl.client.DefaultHttpClient;
-import org.simulation.util.ConnectionManager;
+import org.apache.http.impl.client.CloseableHttpClient;
+import org.apache.http.impl.client.HttpClients;
 import org.simulation.util.Constants;
 
 import java.io.*;
@@ -48,7 +48,7 @@ public abstract class AbstractLogin {
      */
     public final String IMG_ROOT_PATH = System.getProperty("user.dir") + File.separator;
 
-    private DefaultHttpClient userClient;
+    private CloseableHttpClient userClient;
     private ObjectMapper mapper;
 
     private String userName;
@@ -67,7 +67,7 @@ public abstract class AbstractLogin {
         this.password = password;
 
         readyParams = new HashMap<>();
-        userClient = ConnectionManager.getHttpClient();
+        userClient = HttpClients.createDefault();
         mapper = new ObjectMapper();
     }
 
@@ -228,7 +228,7 @@ public abstract class AbstractLogin {
         return mapper;
     }
 
-    public DefaultHttpClient getUserClient() {
+    public CloseableHttpClient getUserClient() {
         return userClient;
     }
 }
