@@ -29,8 +29,8 @@ import org.apache.http.impl.client.DefaultHttpClient;
  * @since    JDK 1.8</br>
  */
 @SuppressWarnings("deprecation")
-public class SSLClientWithoutCerTrustself extends DefaultHttpClient {
-    public SSLClientWithoutCerTrustself() throws Exception {
+public class SSLClientWithoutCerTrustSelf extends DefaultHttpClient {
+    public SSLClientWithoutCerTrustSelf() throws Exception {
         super();
         SSLSocketFactory ssf = new SSLSocketFactory(
                 new TrustSelfSignedStrategy());

@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2017-2019 Sekito Lv(bluetata) <sekito.lv@gmail.com>
+ * Copyright (c) 2017-2018 Sekito Lv(bluetata) <sekito.lv@gmail.com>
  *
  * Licensed under the Apache License, Version 2.0 (the 'License'); you may not
  * use this file except in compliance with the License. You may obtain a copy of
@@ -15,11 +15,17 @@
  */
 package org.simulation.util;
 
+
+import org.apache.http.conn.ssl.DefaultHostnameVerifier;
 import org.apache.http.conn.ssl.SSLConnectionSocketFactory;
-import org.apache.http.conn.ssl.SSLContexts;
 import org.apache.http.conn.ssl.TrustSelfSignedStrategy;
 import org.apache.http.impl.client.CloseableHttpClient;
 import org.apache.http.impl.client.HttpClients;
+
+// Fixing deprecated code to use current HttpClient implementations         Sekito.Lv 01/30/2019 11:29     Start
+import org.apache.http.ssl.SSLContexts;
+//import org.apache.http.conn.ssl.SSLContexts;
+// Fixing deprecated code to use current HttpClient implementations         Sekito.Lv 01/30/2019 11:29     End
 
 import javax.net.ssl.SSLContext;
 import java.io.IOException;
@@ -49,12 +55,19 @@ public class SSLClientWithCerFactory {
                 .loadTrustMaterial(trustStore, new TrustSelfSignedStrategy())
                 .build();
 
+// Fixing deprecated code to use current HttpClient implementations         Sekito.Lv 01/30/2019 11:29     Start
         SSLConnectionSocketFactory factory = new SSLConnectionSocketFactory(
                 sslContext, new String[] { "TLSv1" }, null,
-                SSLConnectionSocketFactory.BROWSER_COMPATIBLE_HOSTNAME_VERIFIER);
-        // SSLConnectionSocketFactory factory = new SSLConnectionSocketFactory(
-        // sslContext, new String[] { "TLSv1" }, null,
-        // SSLConnectionSocketFactory.BROWSER_COMPATIBLE_HOSTNAME_VERIFIER);
+                new DefaultHostnameVerifier());
+
+        // 4.5之前用法，已经废弃的API
+//        SSLConnectionSocketFactory factory = new SSLConnectionSocketFactory(
+//                sslContext, new String[] { "TLSv1" }, null,
+//                SSLConnectionSocketFactory.BROWSER_COMPATIBLE_HOSTNAME_VERIFIER);
+// Fixing deprecated code to use current HttpClient implementations         Sekito.Lv 01/30/2019 11:29     End
+
+
+
         CloseableHttpClient closeableHttpClient = HttpClients.custom()
                 .setSSLSocketFactory(factory).build();
         return closeableHttpClient;
