@@ -56,14 +56,15 @@ public class SSLClientWithCerFactory {
                 .build();
 
 // Fixing deprecated code to use current HttpClient implementations         Sekito.Lv 01/30/2019 11:29     Start
-        SSLConnectionSocketFactory factory = new SSLConnectionSocketFactory(
-                sslContext, new String[] { "TLSv1" }, null,
-                new DefaultHostnameVerifier());
 
-        // 4.5之前用法，已经废弃的API
+          // 4.4 之前用法，已经过期的API
 //        SSLConnectionSocketFactory factory = new SSLConnectionSocketFactory(
 //                sslContext, new String[] { "TLSv1" }, null,
 //                SSLConnectionSocketFactory.BROWSER_COMPATIBLE_HOSTNAME_VERIFIER);
+
+        SSLConnectionSocketFactory factory = new SSLConnectionSocketFactory(
+                sslContext, new String[] { "TLSv1" }, null,
+                new DefaultHostnameVerifier());
 // Fixing deprecated code to use current HttpClient implementations         Sekito.Lv 01/30/2019 11:29     End
 
 
