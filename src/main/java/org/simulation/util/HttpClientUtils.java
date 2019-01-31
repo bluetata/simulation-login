@@ -175,7 +175,7 @@ public class HttpClientUtils {
         String result = null;
         try {
 
-            closeableHttpClient = new SSLClientWithoutCerTrustself();
+            closeableHttpClient = new SSLClientWithoutCerTrustSelf();
             httpPost = new HttpPost(url);
             List<NameValuePair> data = MapToNameValuePair(requestData);
             if (data.size() > 0) {
