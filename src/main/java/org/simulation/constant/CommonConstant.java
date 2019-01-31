@@ -19,7 +19,7 @@ package org.simulation.constant;
  * 通用常量
  *
  */
-public interface CommonConstant {
+public class CommonConstant {
 
     // 编码
     public static final String CHARSET = "UTF-8";
