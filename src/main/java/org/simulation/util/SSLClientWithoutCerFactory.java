@@ -15,6 +15,7 @@
  */
 package org.simulation.util;
 
+import org.apache.http.conn.ssl.NoopHostnameVerifier;
 import org.apache.http.conn.ssl.SSLConnectionSocketFactory;
 import org.apache.http.impl.client.CloseableHttpClient;
 import org.apache.http.impl.client.HttpClients;
@@ -61,9 +62,18 @@ public class SSLClientWithoutCerFactory {
             }
         };
         ctx.init(null, new TrustManager[] { tm }, null);
+
+// Fixing deprecated code to use current HttpClient implementations         Sekito.Lv 02/06/2019 17:40     Start
+//        4.4 之前用法，已经过期的API
+//        SSLConnectionSocketFactory factory = new SSLConnectionSocketFactory(ctx,
+//                new String[] { "TLSv1" }, null,
+//                SSLConnectionSocketFactory.ALLOW_ALL_HOSTNAME_VERIFIER);
+
         SSLConnectionSocketFactory factory = new SSLConnectionSocketFactory(ctx,
                 new String[] { "TLSv1" }, null,
-                SSLConnectionSocketFactory.ALLOW_ALL_HOSTNAME_VERIFIER);
+                new NoopHostnameVerifier());
+// Fixing deprecated code to use current HttpClient implementations         Sekito.Lv 02/06/2019 17:40     End
+
         CloseableHttpClient client = HttpClients.custom()
                 .setSSLSocketFactory(factory).build();
 
